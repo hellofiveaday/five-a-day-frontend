@@ -12,7 +12,7 @@ function FaqItem({ question, answer }) {
         className="w-full text-left py-5 px-4 flex justify-between items-center hover:bg-gray-50 transition-colors"
         type="button"
       >
-        <span className="font-semibold text-primary-dark">{question}</span>
+        <span className="font-heading font-semibold text-primary-dark">{question}</span>
         <svg
           className={`w-5 h-5 text-primary transition-transform ${open ? "rotate-180" : ""}`}
           fill="none"
@@ -45,14 +45,14 @@ export default function PreguntasFrecuentes() {
           alt="Preguntas frecuentes"
           className="w-full h-48 md:h-72 object-cover"
         />
-        <div className="absolute inset-0 bg-primary-dark/50 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">{faqPage.title}</h1>
+        <div className="absolute inset-0 bg-primary-dark/60 flex items-center justify-center">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-white">{faqPage.title}</h1>
         </div>
       </section>
 
       {/* FAQ list */}
       <section className="py-12 bg-white">
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-[980px] mx-auto px-4">
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             {faqPage.questions.map((item) => (
               <FaqItem key={item.question} question={item.question} answer={item.answer} />

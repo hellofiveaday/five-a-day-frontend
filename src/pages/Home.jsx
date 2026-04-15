@@ -5,54 +5,74 @@ import ContactSection from "../components/ContactSection";
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-linear-to-br from-primary-dark via-primary to-primary-light text-white">
-        <div className="max-w-7xl mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+      {/* Hero — image left, green content box right (matching original) */}
+      <section className="bg-white">
+        <div className="max-w-[980px] mx-auto px-4 py-12 md:py-16 flex flex-col md:flex-row items-stretch gap-0">
+          {/* Left: student image */}
+          <div className="md:w-1/2 relative">
+            <img
+              src="/images/hero-students.jpg"
+              alt="Students at Five a Day"
+              className="w-full h-full min-h-[350px] object-cover rounded-l-2xl md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none"
+            />
+          </div>
+
+          {/* Right: green content card with decorative blobs */}
+          <div className="md:w-1/2 bg-accent-green relative rounded-r-2xl md:rounded-r-2xl rounded-b-2xl md:rounded-bl-none p-8 md:p-10 flex flex-col justify-center overflow-hidden">
+            {/* Decorative blob shapes */}
+            <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full bg-primary/20 blur-sm" />
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-accent-yellow/40 blur-sm" />
+            <div className="absolute top-1/2 right-4 w-16 h-16 rounded-full bg-accent-blue/30 blur-sm" />
+
+            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-darker leading-tight mb-4 relative z-10">
               {heroContent.title}{" "}
-              <span className="text-accent">{heroContent.highlight}</span>
+              <span className="text-primary">{heroContent.highlight}</span>
             </h1>
-            <p className="text-lg md:text-xl mb-4 opacity-90">
+            <p className="text-primary-darker/90 text-base leading-relaxed mb-4 relative z-10">
               {heroContent.description}
             </p>
-            <p className="text-base mb-4 opacity-80">{heroContent.descriptionExtended}</p>
-            <p className="text-base mb-6 opacity-80">{heroContent.extras}</p>
-            <p className="text-sm italic mb-6 opacity-75">{heroContent.ctaSubtext}</p>
+            <p className="text-primary-darker/80 text-sm leading-relaxed mb-6 relative z-10">
+              {heroContent.descriptionExtended}
+            </p>
             <a
               href="#contacto"
-              className="inline-block bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-full text-lg transition-colors shadow-lg"
+              className="inline-block bg-primary hover:bg-primary-dark text-white font-heading font-bold py-3 px-8 text-lg transition-colors shadow-lg relative z-10 text-center rounded-md"
             >
               {heroContent.cta}
             </a>
           </div>
-          <div className="flex-1 max-w-md">
-            <img
-              src="/images/hero-students.jpg"
-              alt="Students at Five a Day"
-              className="rounded-2xl shadow-2xl w-full"
-            />
-          </div>
         </div>
       </section>
 
-      {/* Metodología preview */}
+      {/* Yellow banner section */}
+      <section className="bg-accent-yellow py-10">
+        <div className="max-w-[980px] mx-auto px-4 text-center">
+          <p className="text-primary-darker text-lg md:text-xl font-heading font-semibold leading-relaxed">
+            {heroContent.extras}
+          </p>
+          <p className="mt-4 text-primary-darker/80 italic text-sm">
+            {heroContent.ctaSubtext}
+          </p>
+        </div>
+      </section>
+
+      {/* Metodología preview — alternating blocks */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark text-center mb-4">
+        <div className="max-w-[980px] mx-auto px-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-dark text-center mb-4">
             {metodologiaHome.sectionTitle}
           </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-14">
             {metodologiaHome.intro}
           </p>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {metodologiaHome.blocks.map((block, i) => (
               <div
                 key={block.title}
                 className={`flex flex-col ${
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } items-center gap-8`}
+                } items-center gap-10`}
               >
                 <div className="flex-1">
                   <img
@@ -62,16 +82,16 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary-dark mb-4">
+                  <h3 className="font-heading text-2xl font-bold text-primary-dark mb-4">
                     {block.title}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">{block.text}</p>
                   {block.link && (
                     <Link
                       to={block.link.path}
-                      className="inline-block mt-4 text-primary hover:text-primary-dark font-semibold underline"
+                      className="inline-block mt-4 text-primary hover:text-primary-dark font-heading font-semibold underline"
                     >
-                      {block.link.label}
+                      {block.link.label} →
                     </Link>
                   )}
                 </div>

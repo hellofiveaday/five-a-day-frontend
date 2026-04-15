@@ -1,8 +1,8 @@
 export default function AvisoLegal() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-3xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-primary-dark mb-8">Aviso Legal</h1>
+      <div className="max-w-[980px] mx-auto px-4">
+        <h1 className="font-heading text-3xl font-bold text-primary-dark mb-8">Aviso Legal</h1>
 
         <div className="prose prose-gray max-w-none space-y-4 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-semibold text-primary-dark">

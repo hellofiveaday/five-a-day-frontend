@@ -1,16 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2d6a4f;
-  --color-primary-light: #40916c;
-  --color-primary-dark: #1b4332;
-  --color-accent: #f4a261;
-  --color-accent-dark: #e76f51;
-  --color-warm: #fefae0;
-  --color-warm-dark: #faedcd;
-  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  /* Purple palette from original site */
+  --color-primary: #b11fff;
+  --color-primary-light: #d580ff;
+  --color-primary-dark: #7615aa;
+  --color-primary-darker: #3b0a55;
+
+  /* Accent colors */
+  --color-accent-green: #bcffb9;
+  --color-accent-green-dark: #7ed957;
+  --color-accent-yellow: #feeb85;
+  --color-accent-orange: #fca21a;
+  --color-accent-blue: #38b6ff;
+  --color-accent-pink: #e5b4ff;
+
+  /* Neutral / warm backgrounds */
+  --color-warm: #faf5ff;
+  --color-warm-dark: #f0e6f6;
+
+  /* Legacy aliases used in components */
+  --color-accent: #b11fff;
+  --color-accent-dark: #7615aa;
+
+  /* Fonts matching original site */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Questrial', sans-serif;
+  --font-sans: 'Questrial', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
