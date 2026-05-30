@@ -7,7 +7,7 @@ export default function NuestraMetodologia() {
       {/* Intro text */}
       <section className="py-12 bg-white">
         <div className="max-w-245 mx-auto px-4 space-y-4">
-          <h1 className="font-title text-4xl font-bold text-primary-dark mb-2">¿Qué ofrecemos?</h1>
+          <h1 className="font-title text-4xl font-bold text-primary-dark mb-2 text-center">¿Qué ofrecemos?</h1>
           <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.intro}</p>
           <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.groups}</p>
           <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.adults}</p>

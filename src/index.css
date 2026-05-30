@@ -24,8 +24,8 @@
   --color-accent-dark: #7615aa;
 
   /* Fonts — change the values here to swap fonts site-wide */
-  --font-title:   'Syne', sans-serif;              /* section & page titles */
-  --font-special: 'Questrial', sans-serif;          /* founder names & special accents */
+  --font-title:   'Imprima', sans-serif;            /* section & page titles */
+  --font-special: 'Arima', sans-serif;              /* founder names & special accents */
   --font-sans:    'Trebuchet MS', Arial, sans-serif; /* default body text */
 
   /* heading keeps pointing to sans so all old font-heading classes become Trebuchet */

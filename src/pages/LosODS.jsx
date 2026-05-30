@@ -7,7 +7,7 @@ export default function LosODS() {
       {/* Intro */}
       <section className="py-12 bg-white">
         <div className="max-w-245 mx-auto px-4">
-          <h1 className="font-title text-4xl font-bold text-primary-dark mb-6">
+          <h1 className="font-title text-4xl font-bold text-primary-dark mb-6 text-center">
             Five a Day y los ODS
           </h1>
           {odsPage.intro.split("\n\n").map((p, i) => (

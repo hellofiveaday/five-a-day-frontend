@@ -47,7 +47,7 @@ export default function Home() {
       </section>
 
       {/* Yellow banner */}
-      <section className="bg-accent-yellow py-10">
+      <section id="yellow-banner" className="bg-accent-yellow py-10">
         <div className="max-w-[980px] mx-auto px-4 text-center">
           <p className="text-primary-darker text-lg md:text-xl font-heading font-semibold leading-relaxed">
             {heroContent.extras}
