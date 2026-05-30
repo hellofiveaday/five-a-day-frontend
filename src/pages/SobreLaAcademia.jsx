@@ -1,7 +1,30 @@
 import { useState, useEffect } from "react";
-import { sobreAcademiaPage } from "../data";
+import { sobreAcademiaPage, siteConfig } from "../data";
 import ImageGallery from "../components/ImageGallery";
 import ContactSection from "../components/ContactSection";
+import Reveal from "../components/Reveal";
+
+const STREET_IN_TEXT = "C/ Hermanos Jiménez 25";
+
+function highlightAddress(text) {
+  const parts = text.split(STREET_IN_TEXT);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => (
+    <span key={i}>
+      {part}
+      {i < parts.length - 1 && (
+        <a
+          href={siteConfig.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-semibold hover:text-primary-dark transition-colors"
+        >
+          {STREET_IN_TEXT}
+        </a>
+      )}
+    </span>
+  ));
+}
 
 function TestimonialsCarousel({ testimonials }) {
   const [current, setCurrent] = useState(0);
@@ -16,7 +39,14 @@ function TestimonialsCarousel({ testimonials }) {
   const next = () => setCurrent((c) => (c + 1) % n);
 
   return (
-    <div className="max-w-2xl mx-auto text-center">
+    <div className="max-w-2xl mx-auto text-center relative">
+      {/* Decorative large background quote mark */}
+      <div className="absolute -top-6 left-0 text-primary/8 pointer-events-none select-none" aria-hidden="true">
+        <svg className="w-28 h-28" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+        </svg>
+      </div>
+
       <div className="relative min-h-40 flex items-center justify-center">
         {/* Prev arrow */}
         <button
@@ -36,9 +66,6 @@ function TestimonialsCarousel({ testimonials }) {
               i === current ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            <svg className="w-8 h-8 text-primary/30 mb-3" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-            </svg>
             <p className="text-gray-700 italic leading-relaxed mb-4 text-justify">
               {t.text}
             </p>
@@ -65,8 +92,8 @@ function TestimonialsCarousel({ testimonials }) {
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Testimonio ${i + 1}`}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
-              i === current ? "bg-primary" : "bg-gray-300 hover:bg-primary/40"
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              i === current ? "bg-primary scale-125" : "bg-gray-300 hover:bg-primary/40"
             }`}
           />
         ))}
@@ -80,44 +107,52 @@ export default function SobreLaAcademia() {
     <>
       {/* 1. Split intro: image left + mint text right */}
       <section className="bg-white">
-        <div className="flex flex-col md:flex-row min-h-[420px]">
-          <div className="md:w-1/2">
+        <div className="flex flex-col md:flex-row min-h-105">
+          <div className="md:w-1/2 overflow-hidden group">
             <img
               src={sobreAcademiaPage.image}
               alt="Sobre la academia"
-              className="w-full h-64 md:h-full object-cover"
+              className="w-full h-64 md:h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
           <div className="md:w-1/2 bg-[#e6f7f0] flex flex-col justify-center p-8 md:p-12">
-            <h1 className="font-title text-3xl md:text-4xl font-bold text-primary-dark mb-6">
-              {sobreAcademiaPage.title}
-            </h1>
-            {sobreAcademiaPage.intro.split("\n\n").map((p, i) => (
-              <p key={i} className="text-gray-700 leading-relaxed mb-4 text-justify">
-                {p}
-              </p>
-            ))}
+            <Reveal>
+              <h1 className="font-title text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+                {sobreAcademiaPage.title}
+              </h1>
+              {sobreAcademiaPage.intro.split("\n\n").map((p, i) => (
+                <p key={i} className="text-gray-700 leading-relaxed mb-4 text-justify">
+                  {highlightAddress(p)}
+                </p>
+              ))}
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* 2. Yellow section — differences list */}
       <section className="py-14 bg-accent-yellow">
-        <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="text-3xl font-bold italic text-primary-darker text-center mb-4">
-            {sobreAcademiaPage.differencesTitle}
-          </h2>
-          <div className="mt-2 mb-8 text-center">
-            {sobreAcademiaPage.differencesIntro.split("\n\n").map((p, i) => (
-              <p key={i} className="text-primary-darker/80 leading-relaxed mb-2">
-                {p}
-              </p>
-            ))}
-          </div>
+        <div className="max-w-245 mx-auto px-4">
+          <Reveal>
+            <h2 className="text-3xl font-bold italic text-primary-darker text-center mb-4">
+              {sobreAcademiaPage.differencesTitle}
+            </h2>
+            <div className="mt-2 mb-8 text-center">
+              {sobreAcademiaPage.differencesIntro.split("\n\n").map((p, i) => (
+                <p key={i} className="text-primary-darker/80 leading-relaxed mb-2">
+                  {p}
+                </p>
+              ))}
+            </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {sobreAcademiaPage.differences.map((diff) => (
-              <div key={diff.title} className="bg-white/70 rounded-xl p-5 shadow-sm">
+            {sobreAcademiaPage.differences.map((diff, idx) => (
+              <Reveal
+                key={diff.title}
+                delay={idx * 70}
+                className="bg-white/70 hover:bg-white rounded-xl p-5 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+              >
                 <h3 className="font-heading font-bold text-primary-dark mb-2 flex items-start gap-2">
                   <span className="text-accent-green-dark shrink-0">✅</span>
                   {diff.title}
@@ -130,7 +165,7 @@ export default function SobreLaAcademia() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -138,31 +173,37 @@ export default function SobreLaAcademia() {
 
       {/* 3. Photo gallery */}
       <section className="py-14 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
-            Nuestra academia
-          </h2>
+        <div className="max-w-245 mx-auto px-4">
+          <Reveal>
+            <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
+              Nuestra academia
+            </h2>
+          </Reveal>
           <ImageGallery images={sobreAcademiaPage.gallery} />
         </div>
       </section>
 
       {/* 4. Testimonials */}
       <section className="py-14 bg-warm">
-        <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
-            ¿Qué opinan las familias?
-          </h2>
+        <div className="max-w-245 mx-auto px-4">
+          <Reveal>
+            <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
+              ¿Qué opinan las familias?
+            </h2>
+          </Reveal>
           <TestimonialsCarousel testimonials={sobreAcademiaPage.testimonials} />
         </div>
       </section>
 
       {/* 5. Google Maps */}
       <section className="py-14 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-8">
-            Ubicación
-          </h2>
-          <div className="rounded-xl overflow-hidden shadow-lg">
+        <div className="max-w-245 mx-auto px-4">
+          <Reveal>
+            <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-8">
+              Ubicación
+            </h2>
+          </Reveal>
+          <Reveal delay={100} className="rounded-xl overflow-hidden shadow-lg">
             <iframe
               title="Five a Day English Academy — Ubicación"
               src="https://maps.google.com/maps?q=38.9939218,-1.8668769&z=17&output=embed"
@@ -172,7 +213,7 @@ export default function SobreLaAcademia() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </div>
+          </Reveal>
           <div className="mt-4 text-center">
             <a
               href="https://maps.app.goo.gl/1JMh9yrg4pPKtfJW9"

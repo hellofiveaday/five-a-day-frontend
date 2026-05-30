@@ -1,5 +1,6 @@
 import { faqPage } from "../data";
 import ContactSection from "../components/ContactSection";
+import Reveal from "../components/Reveal";
 
 const icons = {
   "academic-cap": (
@@ -56,10 +57,11 @@ export default function PreguntasFrecuentes() {
       <section className="py-16 bg-white">
         <div className="max-w-245 mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {faqPage.questions.map((item) => (
-              <div
+            {faqPage.questions.map((item, idx) => (
+              <Reveal
                 key={item.question}
-                className="bg-warm rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
+                delay={idx * 80}
+                className="bg-warm rounded-2xl p-6 shadow-sm hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 flex flex-col gap-3"
               >
                 {/* Icon */}
                 <div className="text-primary flex justify-center">
@@ -77,7 +79,7 @@ export default function PreguntasFrecuentes() {
                     <p key={i} className="text-justify">{p}</p>
                   ))}
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { siteConfig, navigation } from "../data";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
@@ -27,7 +34,7 @@ export default function Navbar() {
       </div>
 
       {/* Main nav — white, sticky */}
-      <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 opacity-90">
+      <nav className={`bg-white/95 backdrop-blur-sm sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? "shadow-lg" : "shadow-sm"}`}>
         <div className="max-w-[980px] mx-auto px-4 flex items-center justify-between h-32">
           <Link to="/" className="flex items-center shrink-0">
             <img src="/images/logo_transparent.png" alt="Five a Day English Academy" className="h-28 w-auto" />

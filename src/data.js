@@ -20,7 +20,7 @@ export const siteConfig = {
   },
   hours: {
     phone: "Por teléfono: mañanas de 12:00 a 13:30",
-    inPerson: "Presencial: mañanas de 11:30 a 13:30 y tardes de 16:00 a 20:30, viernes de 12:00 a 18:30.",
+    inPerson: "Presencial: mañanas de 11:30 a 13:30 y tardes de 16:00 a 20:30, viernes de 12:00 a 18:30",
   },
   social: {
     instagram: "https://www.instagram.com/fiveadayenglish/",
