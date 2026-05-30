@@ -1,40 +1,46 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { siteConfig, navigation } from "../data";
-import Logo from "./Logo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* Top contact bar — dark purple */}
-      <div className="bg-primary-dark text-white text-sm py-2 px-4 flex flex-wrap justify-center gap-4 md:gap-8">
-        <span className="flex items-center gap-1">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+      {/* Top contact bar — dark purple, larger font */}
+      <div className="bg-primary-dark text-white text-base py-2.5 px-4 flex flex-wrap justify-center gap-4 md:gap-10">
+        <a
+          href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+          className="flex items-center gap-2 hover:text-accent-green transition-colors"
+        >
+          <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
           {siteConfig.phone}
-        </span>
-        <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-1 hover:text-accent-green transition-colors">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        </a>
+        <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-accent-green transition-colors">
+          <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
           {siteConfig.email}
         </a>
       </div>
 
       {/* Main nav — white, sticky */}
       <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-        <div className="max-w-[980px] mx-auto px-4 flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <Logo className="h-14 w-auto" />
+        <div className="max-w-[980px] mx-auto px-4 flex items-center justify-between h-32">
+          <Link to="/" className="flex items-center shrink-0">
+            <img src="/images/logo.png" alt="Five a Day English Academy" className="h-28 w-auto" />
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-5">
+          <ul className="hidden lg:flex items-center gap-4">
             {navigation.map((item) => (
               <li key={item.path}>
-                {item.path.startsWith("/#") ? (
+                {item.path.startsWith("#") ? (
                   <a
                     href={item.path}
-                    className="font-heading text-sm font-semibold text-primary-dark hover:text-primary transition-colors uppercase tracking-wide"
+                    className="font-heading text-xs font-semibold text-primary-dark hover:text-primary transition-colors uppercase tracking-wide"
                   >
                     {item.label}
                   </a>
@@ -42,7 +48,7 @@ export default function Navbar() {
                   <NavLink
                     to={item.path}
                     className={({ isActive }) =>
-                      `font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${
+                      `font-heading text-xs font-semibold uppercase tracking-wide transition-colors ${
                         isActive
                           ? "text-primary border-b-2 border-primary pb-1"
                           : "text-primary-dark hover:text-primary"
@@ -78,7 +84,7 @@ export default function Navbar() {
           <ul className="lg:hidden bg-white border-t border-purple-100 px-4 pb-4 space-y-1">
             {navigation.map((item) => (
               <li key={item.path}>
-                {item.path.startsWith("/#") ? (
+                {item.path.startsWith("#") ? (
                   <a
                     href={item.path}
                     onClick={() => setOpen(false)}

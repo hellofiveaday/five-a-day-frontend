@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { founders } from "../data";
 import ContactSection from "../components/ContactSection";
 
@@ -11,53 +12,83 @@ export default function QuienesSomos() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
-          {founders.map((founder, i) => (
-            <div
-              key={founder.id}
-              className={`mb-16 flex flex-col ${
-                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 items-start`}
-            >
-              {/* Photo & quick info */}
-              <div className="md:w-1/3 text-center">
+      {founders.map((founder, i) => {
+        const isEven = i % 2 === 0;
+        return (
+          <article key={founder.id}>
+            {/* Full-width two-panel header */}
+            <div className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
+
+              {/* Photo panel — mint green background */}
+              <div className="md:w-1/2 bg-[#e8f5e0] relative min-h-105 md:min-h-125 overflow-hidden flex items-end justify-center">
+                {/* Large purple circle */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-72 md:w-80 md:h-80 rounded-full bg-primary" />
+                {/* Photo sitting on the circle, overflowing above */}
                 <img
                   src={founder.image}
                   alt={founder.name}
-                  className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg mb-4 ring-4 ring-accent-pink/30"
+                  className="relative z-10 h-[95%] max-h-120 w-auto object-contain object-bottom"
                 />
-                <h2 className="font-heading text-2xl font-bold text-primary-dark">{founder.name}</h2>
-                <p className="text-primary italic">{founder.role}</p>
-                <blockquote className="mt-3 text-sm text-gray-500 italic px-4">
+              </div>
+
+              {/* Text panel — white */}
+              <div className={`md:w-1/2 bg-white flex flex-col justify-center py-12 px-10 ${isEven ? "md:pl-20 md:pr-28" : "md:pr-20 md:pl-28"}`}>
+                <p className="font-heading text-lg font-semibold text-gray-800 mb-0.5">
+                  {founder.name}
+                </p>
+                <p className="font-heading text-base text-primary mb-8">
+                  {founder.role}
+                </p>
+                <blockquote className="font-heading text-3xl md:text-4xl italic text-[#5d8060] leading-snug mb-6">
                   &ldquo;{founder.quoteEn}&rdquo;
                 </blockquote>
-                <blockquote className="mt-1 text-xs text-gray-400 italic px-4">
+                <blockquote className="font-heading text-lg italic text-[#5d8060]/75 text-center">
                   &ldquo;{founder.quoteEs}&rdquo;
                 </blockquote>
               </div>
+            </div>
 
-              {/* Bio & experience */}
-              <div className="md:w-2/3">
-                <h3 className="font-heading text-xl font-semibold text-primary-dark mb-3">Sobre mí</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">{founder.about}</p>
+            {/* Bio + Experience — full width */}
+            <div className="bg-white py-12">
+              <div className="max-w-245 mx-auto px-8 md:px-14 space-y-10">
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-primary-dark mb-3">Sobre mí</h3>
+                  <p className="text-gray-700 leading-relaxed text-justify">{founder.about}</p>
+                </div>
 
-                <h3 className="font-heading text-xl font-semibold text-primary-dark mb-3">
-                  Experiencia profesional
-                </h3>
-                <div className="border-l-4 border-primary pl-4 space-y-4">
-                  {founder.experience.map((exp) => (
-                    <div key={exp.date}>
-                      <p className="text-sm font-bold text-primary">{exp.date}</p>
-                      <p className="text-gray-700">{exp.text}</p>
-                    </div>
-                  ))}
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-primary-dark mb-4">
+                    Experiencia profesional
+                  </h3>
+                  <div>
+                    {founder.experience.map((exp, idx, arr) => (
+                      <Fragment key={exp.date}>
+                        {/* Entry row */}
+                        <div className="flex items-start">
+                          <div className="w-28 text-right pr-4 shrink-0 text-primary font-heading text-sm font-semibold leading-none pt-0.5">
+                            {exp.date}
+                          </div>
+                          <div className="w-3 h-3 rounded-full bg-black shrink-0 relative z-10 -ml-1.5 mt-0.5" />
+                          <div className="flex-1 pl-5 text-primary font-heading text-sm leading-snug">
+                            {exp.text}
+                          </div>
+                        </div>
+                        {/* Connector line between entries — not after last */}
+                        {idx < arr.length - 1 && (
+                          <div className="flex h-8">
+                            <div className="w-28 shrink-0" />
+                            <div className="w-px bg-black" />
+                          </div>
+                        )}
+                      </Fragment>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </article>
+        );
+      })}
 
       <ContactSection />
     </>

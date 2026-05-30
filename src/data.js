@@ -9,7 +9,9 @@ export const siteConfig = {
   taglineEs: "Estamos aquí para aprender y ayudar a nuestros cerebros a fortalecerse.",
   copyright: "© 2025 Silvia Yubitza Moreno Carlín",
   email: "hellofiveaday@gmail.com",
-  phone: "967 049 096",
+  phone: "613 48 11 41",
+  whatsapp: "https://wa.me/34613481141",
+  mapsUrl: "https://maps.app.goo.gl/1JMh9yrg4pPKtfJW9",
   address: {
     street: "C/ Hermanos Jiménez, 25",
     postalCode: "02004",
@@ -32,7 +34,7 @@ export const navigation = [
   { label: "Los ODS", path: "/los-ods" },
   { label: "Sobre la academia", path: "/sobre-la-academia" },
   { label: "Preguntas frecuentes", path: "/preguntas-frecuentes" },
-  { label: "Contacto", path: "/#contacto" },
+  { label: "Contacto", path: "#contacto" },
 ];
 
 export const heroContent = {
@@ -57,23 +59,23 @@ export const metodologiaHome = {
     {
       title: "¿Por qué la lectoescritura?",
       text: "Desde la infancia, los niños y las niñas sienten gran curiosidad por el mundo que les rodea. La lectura y la escritura de cuentos e historias de su elección permiten desarrollar otras destrezas lingüísticas y muchas capacidades esenciales, al igual que aporta mucho entretenimiento. Es simple, ¡leer y escribir es divertido!",
-      image: "/images/lectura-aire-libre.jpg",
+      image: "/images/home_2.jpg",
     },
     {
       title: "La metodología 5 a Day",
       text: "Nuestro método propio 5 a Day se inspira en las mejores prácticas internacionales en enseñanza y aprendizaje del inglés, y ha sido adaptado por nuestras fundadoras, maestras bilingües con amplia experiencia en aulas dentro y fuera de España. Ofrece un enfoque único centrado en la lectura que fomenta la autonomía, la creatividad y la confianza de cada estudiante, permitiéndoles adquirir el inglés de forma natural y activa, trabajando todas las áreas del idioma de manera divertida y significativa.",
-      image: "/images/preschool-class.jpg",
+      image: "/images/home_3.jpg",
     },
     {
       title: "Estudiantes comprometidos con su aprendizaje y el planeta",
       text: "Los 5 a Day fomentan la independencia y, a su vez, despiertan el entusiasmo y motivación del estudiante para tomar las riendas de su propio aprendizaje. Además, integramos su educación con los Objetivos de Desarrollo Sostenible. Por ello y más, esta academia va mucho más allá del mero aprendizaje de inglés.",
       link: { label: "Saber más", path: "/los-ods" },
-      image: "/images/students-committed.jpg",
+      image: "/images/home_4.jpg",
     },
     {
       title: "Educando en valores",
       text: 'En Five a Day, fomentamos una serie de valores llamados "Keys to Success", ya que desarrollar buenos hábitos y valores ayuda a los estudiantes a tener éxito en todos los ámbitos de la vida. Por este motivo, les guiaremos para que desarrollen habilidades esenciales como el liderazgo, la confianza, la creatividad y la colaboración.',
-      image: "/images/child-reading-comic.jpg",
+      image: "/images/home_5.jpg",
     },
   ],
 };
@@ -87,7 +89,7 @@ export const founders = [
       "As long as I know that I am doing my best, I can accept the fact that I am not always going to get it right.",
     quoteEs:
       "Mientras sepa que lo estoy haciendo lo mejor posible, puedo aceptar el hecho de que no siempre voy a hacerlo bien.",
-    image: "/images/claudia.jpg",
+    image: "/images/penelope.jpeg",
     about:
       "Me considero una persona metódica y emprendedora, que siempre ha sentido gran pasión por los idiomas, la educación y las artes. De este modo, doy lo mejor de mí para promocionar una educación de calidad a través de un aprendizaje activo, significativo y cooperativo. Adopto una aptitud positiva y de mejora continua afirmando que \"estamos en continuo crecimiento y los errores se convierten en una valiosa oportunidad de aprendizaje\". En cuanto a mi carrera profesional, he tenido la gran oportunidad de trabajar como maestra de inglés en diferentes colegios internacionales en Malta, República Checa, Irlanda y Países Bajos. Sin duda alguna, estas experiencias me han proporcionado la habilidad de aceptar retos y adaptarme rápidamente a nuevos contextos y culturas.",
     experience: [
@@ -105,7 +107,7 @@ export const founders = [
       "You must actively shape your own destiny, and the destiny of the world.",
     quoteEs:
       "Debes forjar activamente tu propio destino, y el destino del mundo.",
-    image: "/images/silvia.jpg",
+    image: "/images/silvia.jpeg",
     about:
       "En cuanto finalicé mis estudios de Educación Primaria Bilingüe en 2019, me mudé a Bélgica para trabajar en el Colegio Internacional de Lovaina como maestra de primaria en inglés. Durante los más de cuatro años que estuve residiendo en Bélgica, aprendí y consolidé por mi cuenta la metodología 5 a Day para enseñar de manera rápida y efectiva el inglés a estudiantes de diferentes procedencias, edades y niveles de inglés. Al mismo tiempo, me formé como Defensora de las Escuelas Globales de la ONU para integrar la Educación para el Desarrollo Sostenible en mis lecciones. Tanto yo como mis antiguos estudiantes hemos sido testigos de primera mano del éxito de la metodología 5 a Day y, sin lugar a dudas, hubo un gran antes y después tras implantar esta metodología en mis clases de inglés. Los numerosos beneficios de la metodología 5 a Day fueron tan evidentes que el profesorado y la dirección del colegio sintieron gran inspiración tras mi trabajo y decidieron usar a su vez este método en sus propias clases de inglés. Actualmente, estoy entusiasmada de estar de vuelta en España y de poder ayudar a más alumnas y alumnos a aprender inglés con esta metodología tan efectiva e innovadora.",
     experience: [
@@ -148,37 +150,38 @@ export const metodologiaPage = {
       title: "Read to Self",
       description:
         "Lectura independiente. Base fundamental para crear lectores, escritores y aprendices para toda la vida que estén motivados de forma independiente.",
-      image: "/images/read-to-self.jpg",
+      image: "/images/metodologia_1.jpg",
     },
     {
       title: "Read to Someone",
       description:
         "Leer con alguien. Ayuda a los lectores a desarrollar las áreas de comprensión, precisión, fluidez, atención, colaboración, etc. ¡Les encanta la lectura en pareja!",
-      image: "/images/read-to-someone.jpg",
+      image: "/images/metodologia_2.jpg",
     },
     {
       title: "Listen to Reading",
       description:
         "Escucha de la lectura. Proporciona modelos de fluidez que son valiosos para todas las edades, pero especialmente para aquellos cuya comprensión auditiva supera su nivel de lectura y esencial para los que están aprendiendo inglés.",
-      image: "/images/listen-to-reading.jpg",
+      image: "/images/metodologia_3.jpg",
     },
     {
       title: "Work on Writing",
       description:
         "Escritura creativa. Los estudiantes disfrutan escribiendo acerca de temas de su elección, creciendo como escritores con la guía de sus profesoras.",
-      image: "/images/work-on-writing.jpg",
+      image: "/images/metodologia_4.jpg",
     },
     {
       title: "Word Work",
       description:
         "Trabajo con palabras. Se experimenta con patrones ortográficos y gramaticales. Se memorizan palabras usadas con frecuencia y se desarrolla una auténtica curiosidad e interés por palabras nuevas que les permite expandir y enriquecer su vocabulario, así como escribir con corrección.",
-      image: "/images/word-work.jpg",
+      image: "/images/metodologia_5.jpg",
     },
   ],
   funFridays: {
     title: "Fun Fridays!",
     description:
       "Los viernes se llevan a cabo eventos especiales gratuitos de duración variable a los que podrán asistir voluntariamente los niños y niñas. Alguno ejemplos son Zumba en Inglés y talleres de manualidades.",
+    image: "/images/metodologia_6.jpg",
   },
 };
 
@@ -194,98 +197,119 @@ export const odsPage = {
     "Para conocer las directrices sobre el uso del logo de los Objetivos de Desarrollo Sostenible (ODS), los 17 iconos y la ruleta de colores, descargue el manual corporativo.",
   sdgManualUrl:
     "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf",
-  sdgImage: "/images/sdg-poster.png",
+  sdgImage: "/images/ods.png",
 };
 
 export const sobreAcademiaPage = {
   title: "Sobre la academia",
   intro:
     "Nuestro centro en C/ Hermanos Jiménez 25 en Albacete nace como resultado del esfuerzo, trabajo, ganas e ilusión de dos maestras bilingües (¡hermanas!) con una enorme pasión por el inglés, la educación y la sostenibilidad.\n\nTenemos una gran experiencia en la enseñanza de inglés como lengua extranjera y un método propio innovador. Apostamos por una educación integral de gran calidad.",
+  image: "/images/about.jpeg",
   differencesTitle: "Five a Day English Academy: mucho más que aprender inglés",
   differencesIntro:
     "En Five a Day, aprender inglés es una experiencia real, divertida y significativa. Nuestro método propio de cinco estaciones es único en España, diseñado para que niñas y niños, adolescentes y adultos desarrollen habilidades lingüísticas y personales que van mucho más allá del idioma.\n\n¿En qué se diferencia Five a Day de otras academias?",
   differences: [
     {
-      title: "✅ Sesiones más largas y efectivas",
+      title: "Sesiones más largas y efectivas",
       items: [
         "Clases de 1 hora y 20 minutos, dos veces por semana, frente a 50–60 minutos habituales en otras academias.",
         "Tiempo suficiente para inmersión real en el idioma y actividades dinámicas.",
       ],
     },
     {
-      title: "✅ Aprendizaje que continúa en casa",
+      title: "Aprendizaje que continúa en casa",
       items: [
         "Plataforma de libros electrónicos nivelados en inglés para seguir practicando de manera autónoma.",
         "Fomenta responsabilidad y autonomía en el aprendizaje de cada estudiante.",
       ],
     },
     {
-      title: "✅ Metodología integral y lúdica",
+      title: "Metodología integral y lúdica",
       items: [
         "Cinco estaciones que combinan lectoescritura, conversación, arte, movimiento y proyectos.",
         "Desarrollo de pensamiento crítico, creatividad y curiosidad desde edades tempranas.",
       ],
     },
     {
-      title: "✅ Conciencia social y valores",
+      title: "Conciencia social y valores",
       items: [
         "Incorporamos los Objetivos de Desarrollo Sostenible (ODS) en actividades prácticas y motivadoras.",
         "Aprender inglés y al mismo tiempo reflexionar sobre el mundo que nos rodea.",
       ],
     },
     {
-      title: "✅ Ambiente familiar y seguro",
+      title: "Ambiente familiar y seguro",
       items: [
         "Grupos reducidos y un espacio libre de juicios, donde cada estudiante crece con confianza y motivación.",
       ],
     },
   ],
-  ctaTitle: "🚀 Elige Five a Day si quieres…",
-  ctaItems: [
-    "Que el inglés sea divertido, natural y real.",
-    "Que tus hij@s desarrollen autonomía, responsabilidad y creatividad.",
-    "Que aprendan mientras se divierten y reflexionan sobre el mundo.",
+  gallery: [
+    "/images/about_galery_1.jpg",
+    "/images/about_galery_2.jpg",
+    "/images/about_galery_3.jpg",
+    "/images/about_galery_4.jpg",
+    "/images/about_galery_5.jpg",
+    "/images/about_galery_6.jpg",
+    "/images/about_galery_7.jpg",
+    "/images/about_galery_8.jpg",
+    "/images/about_galery_9.jpg",
+    "/images/about_galery_10.jpg",
+    "/images/about_galery_11.jpg",
   ],
   testimonials: [
     {
-      text: "(...) Tras 9 meses de curso puedo decir que es la extraescolar que por supuesto tengo claro que voy a repetir para mis dos hijas, ellas van felices a la academia, no se saltan nunca un día y han aprendido muchísimo (...). Vivimos cerca y por eso las apuntamos, pero hoy por hoy, si viviera en otro barrio no me importaría coger el coche para llevarlas.... Es el dinero mejor invertido en la educación de mis hijos.",
+      text: "Tras 9 meses de curso puedo decir que es la extraescolar que por supuesto tengo claro que voy a repetir para mis dos hijas, ellas van felices a la academia, no se saltan nunca un día y han aprendido muchísimo. Vivimos cerca y por eso las apuntamos, pero hoy por hoy, si viviera en otro barrio no me importaría coger el coche para llevarlas... Es el dinero mejor invertido en la educación de mis hijos.",
       author: "Raquel G.",
     },
+    {
+      text: "Mis hijos han mejorado muchísimo su inglés desde que están en Five a Day. Lo mejor es verlos hablar con confianza y sin miedo a equivocarse. Las profesoras son increíbles y el ambiente es muy familiar.",
+      author: "María T.",
+    },
+    {
+      text: "El método es completamente diferente a lo que conocíamos. Los niños disfrutan cada sesión y aprenden de verdad. Se nota que hay una metodología detrás muy bien pensada. 100% recomendable.",
+      author: "Carlos M.",
+    },
   ],
-  image: "/images/school-days.jpg",
 };
 
 export const faqPage = {
   title: "Preguntas frecuentes",
-  image: "/images/reading-bookstore.jpg",
+  image: "/images/questions.jpeg",
   questions: [
     {
       question: "¿Por qué aprender inglés en nuestra academia?",
+      icon: "academic-cap",
       answer:
         "Porque es única en toda España, creada por maestras bilingües experimentadas y apasionadas por la educación y la sostenibilidad. Con el método 5 a Day los estudiantes adquieren el inglés de manera divertida, natural y significativa, además de muchas otras capacidades esenciales para la vida personal y académica.",
     },
     {
       question: "¿Qué horario tiene?",
+      icon: "clock",
       answer:
         "El horario de apertura de nuestra academia es de lunes a jueves de 15:30h a 20:30h y los viernes de 15:30 a 18:30.\n\nPara cualquier consulta también puedes contactar con nosotras por teléfono o email mañanas y tardes, y nosotras contactaremos contigo con la mayor brevedad posible.",
     },
     {
       question: "¿Cómo son las instalaciones?",
+      icon: "building",
       answer:
         "Contamos con dos aulas espaciosas completamente equipadas para que todas nuestras alumnas y alumnos puedan aprender sintiéndose cómodos y a gusto. Su diseño permite a los estudiantes interactuar entre tod@s o en pequeños grupos, de manera colaborativa y dinámica.",
     },
     {
       question: "¿Cómo son nuestras clases de inglés?",
+      icon: "book-open",
       answer:
         'Trabajamos con grupos reducidos, lo cual permite proporcionar una enseñanza personalizada y adaptada a las necesidades de cada estudiante. Empleamos la metodología "5 a Day" basada en el libro "The Daily 5" redactado por maestras estadounidenses tras mucha investigación y puesta en práctica en el aula de inglés.',
     },
     {
       question: "¿Cómo inscribirse en nuestra academia?",
+      icon: "clipboard",
       answer:
         "Contacta con nosotras por teléfono llamando al 967049096 o a través de nuestro email hellofiveaday@gmail.com.\n\n¡Te invitamos a conocer a nuestras profesoras en una sesión de conversación 1 to 1 gratuita! Visítanos en nuestras instalaciones en Albacete en C/ Hermanos Jiménez 25.",
     },
     {
       question: "¿Qué otras habilidades se desarrollan aquí?",
+      icon: "lightbulb",
       answer:
         'Además de las habilidades básicas del inglés (comprensión y expresión tanto orales como escritas), nuestra academia educa en valores como el respeto, la cooperación, y la responsabilidad entre otros llamados "Keys to Success".',
     },
