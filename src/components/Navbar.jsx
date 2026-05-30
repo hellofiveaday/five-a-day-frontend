@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Top contact bar — dark purple, larger font */}
       <div className="bg-primary-dark text-white text-base py-2.5 px-4 flex flex-wrap justify-center gap-4 md:gap-10">
         <a
-          href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+          href={siteConfig.whatsapp}
           className="flex items-center gap-2 hover:text-accent-green transition-colors"
         >
           <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
