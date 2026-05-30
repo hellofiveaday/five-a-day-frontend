@@ -45,14 +45,16 @@ export default function PreguntasFrecuentes() {
           alt="Preguntas frecuentes"
           className="w-full h-48 md:h-72 object-cover"
         />
-        <div className="absolute inset-0 bg-primary-dark/60 flex items-center justify-center">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-white">{faqPage.title}</h1>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="font-title text-4xl md:text-5xl font-bold text-primary-dark bg-white/90 px-8 py-4 rounded-xl shadow-lg">
+            {faqPage.title}
+          </h1>
         </div>
       </section>
 
       {/* 3-column grid */}
       <section className="py-16 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
+        <div className="max-w-245 mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {faqPage.questions.map((item) => (
               <div

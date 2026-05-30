@@ -96,7 +96,7 @@ export default function ContactSection() {
 
             {/* Right column — form */}
             <div>
-              <h2 className="font-heading text-2xl font-bold text-white mb-1">{contactForm.title}</h2>
+              <h2 className="font-title text-2xl font-bold text-white mb-1">{contactForm.title}</h2>
               <p className="text-white/60 text-base mb-5">{contactForm.subtitle}</p>
 
               {submitted ? (

@@ -24,7 +24,7 @@ export default function Home() {
             <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-accent-yellow/40 blur-sm" />
             <div className="absolute top-1/2 right-4 w-16 h-16 rounded-full bg-accent-blue/30 blur-sm" />
 
-            <h1 className="font-heading text-3xl md:text-4xl font-bold text-primary-darker leading-tight mb-4 relative z-10">
+            <h1 className="font-title text-3xl md:text-4xl font-bold text-primary-darker leading-tight mb-4 relative z-10">
               {heroContent.title}{" "}
               <span className="text-primary">{heroContent.highlight}</span>
             </h1>
@@ -61,7 +61,7 @@ export default function Home() {
       {/* Metodología preview — alternating blocks */}
       <section className="py-16 bg-white">
         <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-dark text-center mb-4">
+          <h2 className="font-title text-3xl md:text-4xl font-bold text-primary-dark text-center mb-4">
             {metodologiaHome.sectionTitle}
           </h2>
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-14">

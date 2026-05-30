@@ -19,8 +19,8 @@ export const siteConfig = {
     country: "España",
   },
   hours: {
-    phone: "Por teléfono: mañanas y tardes.",
-    inPerson: "Presencial: tardes de 16:00 a 20:30, viernes de 16:30 a 18:30.",
+    phone: "Por teléfono: mañanas de 12:00 a 13:30",
+    inPerson: "Presencial: mañanas de 11:30 a 13:30 y tardes de 16:00 a 20:30, viernes de 12:00 a 18:30.",
   },
   social: {
     instagram: "https://www.instagram.com/fiveadayenglish/",
@@ -31,9 +31,9 @@ export const siteConfig = {
 export const navigation = [
   { label: "Quiénes somos", path: "/quienes-somos" },
   { label: "Nuestra metodología", path: "/nuestra-metodologia" },
-  { label: "Los ODS", path: "/los-ods" },
+  { label: "Los ODS", path: "/ods" },
   { label: "Sobre la academia", path: "/sobre-la-academia" },
-  { label: "Preguntas frecuentes", path: "/preguntas-frecuentes" },
+  { label: "Preguntas frecuentes", path: "/faq" },
   { label: "Contacto", path: "#contacto" },
 ];
 
@@ -44,10 +44,8 @@ export const heroContent = {
     "En Five a Day los estudiantes adquieren el inglés de manera natural y significativa mediante 5 rutinas divertidas enfocadas en la lectoescritura.",
   descriptionExtended:
     "Y no sólo aprenden inglés en nuestra academia, sino que lo hacen a la vez que desarrollan capacidades imprescindibles y realizan conexiones con la vida real, dando gran sentido a su aprendizaje.",
-  extras:
-    "También ofrecemos clases de conversación one-to-one, club de lectura en inglés y preparación para exámenes oficiales para estudiantes más mayores.",
   cta: "¡APÚNTATE AQUÍ!",
-  ctaSubtext:
+  extras:
     "Únete a nuestra academia si quieres adquirir el inglés con una metodología increíblemente efectiva y única en toda España. ¿A qué esperas? ¡No dejes pasar esta gran oportunidad!",
 };
 
@@ -89,14 +87,14 @@ export const founders = [
       "As long as I know that I am doing my best, I can accept the fact that I am not always going to get it right.",
     quoteEs:
       "Mientras sepa que lo estoy haciendo lo mejor posible, puedo aceptar el hecho de que no siempre voy a hacerlo bien.",
-    image: "/images/penelope.jpeg",
+    image: "/images/penelope.png",
     about:
-      "Me considero una persona metódica y emprendedora, que siempre ha sentido gran pasión por los idiomas, la educación y las artes. De este modo, doy lo mejor de mí para promocionar una educación de calidad a través de un aprendizaje activo, significativo y cooperativo. Adopto una aptitud positiva y de mejora continua afirmando que \"estamos en continuo crecimiento y los errores se convierten en una valiosa oportunidad de aprendizaje\". En cuanto a mi carrera profesional, he tenido la gran oportunidad de trabajar como maestra de inglés en diferentes colegios internacionales en Malta, República Checa, Irlanda y Países Bajos. Sin duda alguna, estas experiencias me han proporcionado la habilidad de aceptar retos y adaptarme rápidamente a nuevos contextos y culturas.",
+      "Me considero una persona metódica y emprendedora, que siempre ha sentido gran pasión por los idiomas, la educación y las artes. De este modo, doy lo mejor de mí para promocionar una educación de calidad a través de un aprendizaje activo, lúdico, significativo y cooperativo. Adopto una aptitud positiva y de mejora continua afirmando que \"estamos en continuo crecimiento y los errores se convierten en una valiosa oportunidad de aprendizaje\". En cuanto a mi carrera profesional, he tenido la gran oportunidad de trabajar como maestra de inglés en diferentes colegios internacionales en Malta, República Checa, Irlanda y Países Bajos. Sin duda alguna, estas experiencias me han proporcionado la habilidad de aceptar retos y adaptarme rápidamente a nuevos contextos y culturas.",
     experience: [
       { date: "Agosto 2021", text: "Maestra en Quality Schools International, Malta" },
       { date: "Agosto 2019", text: "Maestra en Escuela Internacional en Ostrava, República Checa" },
-      { date: "Enero 2019", text: "Maestra en Galway Educate Together School, Irlanda" },
-      { date: "Agosto 2017", text: "Maestra en Países Bajos" },
+      { date: "Enero 2019", text: "Maestra en prácticas en Galway Educate Together School, Irlanda" },
+      { date: "Agosto 2017", text: "Maestra en prácticas en Países Bajos" },
     ],
   },
   {
@@ -107,7 +105,7 @@ export const founders = [
       "You must actively shape your own destiny, and the destiny of the world.",
     quoteEs:
       "Debes forjar activamente tu propio destino, y el destino del mundo.",
-    image: "/images/silvia.jpeg",
+    image: "/images/silvia.png",
     about:
       "En cuanto finalicé mis estudios de Educación Primaria Bilingüe en 2019, me mudé a Bélgica para trabajar en el Colegio Internacional de Lovaina como maestra de primaria en inglés. Durante los más de cuatro años que estuve residiendo en Bélgica, aprendí y consolidé por mi cuenta la metodología 5 a Day para enseñar de manera rápida y efectiva el inglés a estudiantes de diferentes procedencias, edades y niveles de inglés. Al mismo tiempo, me formé como Defensora de las Escuelas Globales de la ONU para integrar la Educación para el Desarrollo Sostenible en mis lecciones. Tanto yo como mis antiguos estudiantes hemos sido testigos de primera mano del éxito de la metodología 5 a Day y, sin lugar a dudas, hubo un gran antes y después tras implantar esta metodología en mis clases de inglés. Los numerosos beneficios de la metodología 5 a Day fueron tan evidentes que el profesorado y la dirección del colegio sintieron gran inspiración tras mi trabajo y decidieron usar a su vez este método en sus propias clases de inglés. Actualmente, estoy entusiasmada de estar de vuelta en España y de poder ayudar a más alumnas y alumnos a aprender inglés con esta metodología tan efectiva e innovadora.",
     experience: [
@@ -287,7 +285,7 @@ export const faqPage = {
       question: "¿Qué horario tiene?",
       icon: "clock",
       answer:
-        "El horario de apertura de nuestra academia es de lunes a jueves de 15:30h a 20:30h y los viernes de 15:30 a 18:30.\n\nPara cualquier consulta también puedes contactar con nosotras por teléfono o email mañanas y tardes, y nosotras contactaremos contigo con la mayor brevedad posible.",
+        "El horario de apertura de nuestra academia es de lunes a jueves de 15:30h a 20:30h y los viernes de 16:00 a 18:30.\n\nPara cualquier consulta también puedes contactar con nosotras por teléfono o email mañanas y tardes, y nosotras contactaremos contigo con la mayor brevedad posible.",
     },
     {
       question: "¿Cómo son las instalaciones?",
@@ -305,7 +303,7 @@ export const faqPage = {
       question: "¿Cómo inscribirse en nuestra academia?",
       icon: "clipboard",
       answer:
-        "Contacta con nosotras por teléfono llamando al 967049096 o a través de nuestro email hellofiveaday@gmail.com.\n\n¡Te invitamos a conocer a nuestras profesoras en una sesión de conversación 1 to 1 gratuita! Visítanos en nuestras instalaciones en Albacete en C/ Hermanos Jiménez 25.",
+        "Contacta con nosotras por teléfono llamando al 967 04 90 96, escribiendo un WhatsApp al 613 48 11 41 o a través de nuestro email hellofiveaday@gmail.com.\n\n¡Te invitamos a probar una clase gratuita sin nigún tipo de compromiso! Visítanos en nuestras instalaciones en Albacete en C/ Hermanos Jiménez 25.",
     },
     {
       question: "¿Qué otras habilidades se desarrollan aquí?",
@@ -330,7 +328,7 @@ export const contactForm = {
       label: "Horario preferente",
       type: "select",
       required: false,
-      options: ["14:30", "15:30", "16:30", "17:30", "18:30", "19:30"],
+      options: ["16:10", "17:40", "19:10"],
     },
     { name: "edad", label: "Edad del estudiante", type: "text", required: false },
     { name: "mensaje", label: "Déjanos un mensaje...", type: "textarea", required: true },

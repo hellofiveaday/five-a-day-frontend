@@ -4,17 +4,12 @@ import ContactSection from "../components/ContactSection";
 export default function LosODS() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-primary-dark text-white py-16">
-        <div className="max-w-[980px] mx-auto px-4 text-center">
-          <h1 className="font-heading text-4xl font-bold mb-4">{odsPage.title}</h1>
-          <p className="text-xl text-white/90">{odsPage.subtitle}</p>
-        </div>
-      </section>
-
       {/* Intro */}
       <section className="py-12 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
+        <div className="max-w-245 mx-auto px-4">
+          <h1 className="font-title text-4xl font-bold text-primary-dark mb-6">
+            Five a Day y los ODS
+          </h1>
           {odsPage.intro.split("\n\n").map((p, i) => (
             <p key={i} className="text-primary-dark text-lg leading-relaxed mb-5 text-center">
               {p}
@@ -25,7 +20,7 @@ export default function LosODS() {
 
       {/* SDG Image */}
       <section className="py-8 bg-warm">
-        <div className="max-w-[980px] mx-auto px-4 text-center">
+        <div className="max-w-245 mx-auto px-4 text-center">
           <img
             src={odsPage.sdgImage}
             alt="Objetivos de Desarrollo Sostenible"
@@ -47,8 +42,8 @@ export default function LosODS() {
 
       {/* Education for Sustainable Development */}
       <section className="py-12 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-primary mb-8 text-center">
+        <div className="max-w-245 mx-auto px-4">
+          <h2 className="font-title text-3xl font-bold text-primary mb-8 text-center">
             {odsPage.educationTitle}
           </h2>
           {odsPage.educationText.split("\n\n").map((p, i) => (

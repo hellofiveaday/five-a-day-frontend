@@ -89,7 +89,7 @@ export default function SobreLaAcademia() {
             />
           </div>
           <div className="md:w-1/2 bg-[#e6f7f0] flex flex-col justify-center p-8 md:p-12">
-            <h1 className="font-heading text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            <h1 className="font-title text-3xl md:text-4xl font-bold text-primary-dark mb-6">
               {sobreAcademiaPage.title}
             </h1>
             {sobreAcademiaPage.intro.split("\n\n").map((p, i) => (
@@ -104,7 +104,7 @@ export default function SobreLaAcademia() {
       {/* 2. Yellow section — differences list */}
       <section className="py-14 bg-accent-yellow">
         <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-primary-darker text-center mb-4">
+          <h2 className="text-3xl font-bold italic text-primary-darker text-center mb-4">
             {sobreAcademiaPage.differencesTitle}
           </h2>
           <div className="mt-2 mb-8 text-center">
@@ -139,7 +139,7 @@ export default function SobreLaAcademia() {
       {/* 3. Photo gallery */}
       <section className="py-14 bg-white">
         <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-primary-dark text-center mb-10">
+          <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
             Nuestra academia
           </h2>
           <ImageGallery images={sobreAcademiaPage.gallery} />
@@ -149,7 +149,7 @@ export default function SobreLaAcademia() {
       {/* 4. Testimonials */}
       <section className="py-14 bg-warm">
         <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-primary-dark text-center mb-10">
+          <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
             ¿Qué opinan las familias?
           </h2>
           <TestimonialsCarousel testimonials={sobreAcademiaPage.testimonials} />
@@ -159,7 +159,7 @@ export default function SobreLaAcademia() {
       {/* 5. Google Maps */}
       <section className="py-14 bg-white">
         <div className="max-w-[980px] mx-auto px-4">
-          <h2 className="font-heading text-3xl font-bold text-primary-dark text-center mb-8">
+          <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-8">
             Ubicación
           </h2>
           <div className="rounded-xl overflow-hidden shadow-lg">

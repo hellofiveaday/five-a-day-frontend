@@ -5,13 +5,6 @@ import ContactSection from "../components/ContactSection";
 export default function QuienesSomos() {
   return (
     <>
-      {/* Hero banner */}
-      <section className="bg-primary-dark text-white py-14">
-        <div className="max-w-[980px] mx-auto px-4 text-center">
-          <h1 className="font-heading text-4xl font-bold">Quiénes somos</h1>
-        </div>
-      </section>
-
       {founders.map((founder, i) => {
         const isEven = i % 2 === 0;
         return (
@@ -21,8 +14,6 @@ export default function QuienesSomos() {
 
               {/* Photo panel — mint green background */}
               <div className="md:w-1/2 bg-[#e8f5e0] relative min-h-105 md:min-h-125 overflow-hidden flex items-end justify-center">
-                {/* Large purple circle */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-72 md:w-80 md:h-80 rounded-full bg-primary" />
                 {/* Photo sitting on the circle, overflowing above */}
                 <img
                   src={founder.image}
@@ -33,7 +24,7 @@ export default function QuienesSomos() {
 
               {/* Text panel — white */}
               <div className={`md:w-1/2 bg-white flex flex-col justify-center py-12 px-10 ${isEven ? "md:pl-20 md:pr-28" : "md:pr-20 md:pl-28"}`}>
-                <p className="font-heading text-lg font-semibold text-gray-800 mb-0.5">
+                <p className="font-special text-lg font-semibold text-gray-800 mb-0.5">
                   {founder.name}
                 </p>
                 <p className="font-heading text-base text-primary mb-8">
@@ -52,12 +43,12 @@ export default function QuienesSomos() {
             <div className="bg-white py-12">
               <div className="max-w-245 mx-auto px-8 md:px-14 space-y-10">
                 <div>
-                  <h3 className="font-heading text-xl font-semibold text-primary-dark mb-3">Sobre mí</h3>
+                  <h3 className="font-title text-xl font-semibold text-primary-dark mb-3">Sobre mí</h3>
                   <p className="text-gray-700 leading-relaxed text-justify">{founder.about}</p>
                 </div>
 
                 <div>
-                  <h3 className="font-heading text-xl font-semibold text-primary-dark mb-4">
+                  <h3 className="font-title text-xl font-semibold text-primary-dark mb-4">
                     Experiencia profesional
                   </h3>
                   <div>

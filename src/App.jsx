@@ -18,9 +18,9 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="quienes-somos" element={<QuienesSomos />} />
           <Route path="nuestra-metodologia" element={<NuestraMetodologia />} />
-          <Route path="los-ods" element={<LosODS />} />
+          <Route path="ods" element={<LosODS />} />
           <Route path="sobre-la-academia" element={<SobreLaAcademia />} />
-          <Route path="preguntas-frecuentes" element={<PreguntasFrecuentes />} />
+          <Route path="faq" element={<PreguntasFrecuentes />} />
           <Route path="aviso-legal" element={<AvisoLegal />} />
         </Route>
       </Routes>

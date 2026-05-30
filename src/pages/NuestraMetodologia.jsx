@@ -4,16 +4,10 @@ import ContactSection from "../components/ContactSection";
 export default function NuestraMetodologia() {
   return (
     <>
-      {/* Header */}
-      <section className="bg-primary-dark text-white py-14">
-        <div className="max-w-[980px] mx-auto px-4 text-center">
-          <h1 className="font-heading text-4xl font-bold mb-6">{metodologiaPage.title}</h1>
-        </div>
-      </section>
-
       {/* Intro text */}
       <section className="py-12 bg-white">
-        <div className="max-w-[980px] mx-auto px-4 space-y-4">
+        <div className="max-w-245 mx-auto px-4 space-y-4">
+          <h1 className="font-title text-4xl font-bold text-primary-dark mb-2">¿Qué ofrecemos?</h1>
           <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.intro}</p>
           <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.groups}</p>
           <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.adults}</p>
@@ -22,7 +16,7 @@ export default function NuestraMetodologia() {
 
       {/* Video placeholder */}
       <section className="py-8 bg-warm">
-        <div className="max-w-[980px] mx-auto px-4">
+        <div className="max-w-245 mx-auto px-4">
           <div className="bg-primary-dark/10 border-2 border-dashed border-primary/30 rounded-2xl flex flex-col items-center justify-center py-16 gap-4 text-primary-dark/60">
             <svg className="w-16 h-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -35,7 +29,7 @@ export default function NuestraMetodologia() {
 
       {/* 5 Routines — 3-column grid with overlay description */}
       <section className="py-16 bg-white">
-        <div className="max-w-[980px] mx-auto px-4">
+        <div className="max-w-245 mx-auto px-4">
           <p className="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-14">
             {metodologiaPage.routinesIntro}
           </p>
@@ -64,10 +58,10 @@ export default function NuestraMetodologia() {
 
       {/* Fun Fridays — text left, image right */}
       <section className="py-14 bg-accent-yellow/20">
-        <div className="max-w-[980px] mx-auto px-4">
+        <div className="max-w-245 mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex-1">
-              <h2 className="font-heading text-3xl font-bold text-primary-dark mb-4">
+              <h2 className="font-title text-3xl font-bold text-primary-dark mb-4">
                 {metodologiaPage.funFridays.title}
               </h2>
               <p className="text-gray-700 leading-relaxed text-justify">

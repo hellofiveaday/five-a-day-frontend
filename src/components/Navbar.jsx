@@ -27,10 +27,10 @@ export default function Navbar() {
       </div>
 
       {/* Main nav — white, sticky */}
-      <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+      <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 opacity-90">
         <div className="max-w-[980px] mx-auto px-4 flex items-center justify-between h-32">
           <Link to="/" className="flex items-center shrink-0">
-            <img src="/images/logo.png" alt="Five a Day English Academy" className="h-28 w-auto" />
+            <img src="/images/logo_transparent.png" alt="Five a Day English Academy" className="h-28 w-auto" />
           </Link>
 
           {/* Desktop links */}

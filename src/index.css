@@ -23,10 +23,14 @@
   --color-accent: #b11fff;
   --color-accent-dark: #7615aa;
 
-  /* Fonts matching original site */
-  --font-heading: 'Syne', sans-serif;
-  --font-body: 'Questrial', sans-serif;
-  --font-sans: 'Questrial', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  /* Fonts — change the values here to swap fonts site-wide */
+  --font-title:   'Syne', sans-serif;              /* section & page titles */
+  --font-special: 'Questrial', sans-serif;          /* founder names & special accents */
+  --font-sans:    'Trebuchet MS', Arial, sans-serif; /* default body text */
+
+  /* heading keeps pointing to sans so all old font-heading classes become Trebuchet */
+  --font-heading: 'Trebuchet MS', Arial, sans-serif;
+  --font-body:    'Trebuchet MS', Arial, sans-serif;
 }
 
 html {
@@ -34,9 +38,5 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
 }
