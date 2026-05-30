@@ -45,7 +45,7 @@ export default function QuienesSomos() {
 
                     {/* English quote — gradient text */}
                     <blockquote
-                      className="relative font-heading text-3xl md:text-4xl italic leading-snug mb-5"
+                      className="relative font-heading text-3xl md:text-4xl italic leading-snug mb-5 before:content-none after:content-none"
                       style={{
                         background: "linear-gradient(135deg, #3d6b40 0%, #6ec44a 100%)",
                         WebkitBackgroundClip: "text",
@@ -64,7 +64,7 @@ export default function QuienesSomos() {
                     </div>
 
                     {/* Spanish translation */}
-                    <blockquote className="font-heading text-base italic text-[#5d8060]/60 text-center tracking-wide">
+                    <blockquote className="font-heading text-base italic text-[#5d8060]/60 text-center tracking-wide before:content-none after:content-none">
                       {founder.quoteEs}
                     </blockquote>
                   </div>

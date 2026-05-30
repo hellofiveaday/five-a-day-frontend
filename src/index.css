@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Purple palette from original site */
-  --color-primary: #b11fff;
-  --color-primary-light: #d580ff;
-  --color-primary-dark: #7615aa;
-  --color-primary-darker: #3b0a55;
+  /* Purple palette — muted, sophisticated */
+  --color-primary: #8b5cd4;
+  --color-primary-light: #b899e8;
+  --color-primary-dark: #5e3490;
+  --color-primary-darker: #311858;
 
   /* Accent colors */
   --color-accent-green: #bcffb9;
@@ -13,15 +13,15 @@
   --color-accent-yellow: #feeb85;
   --color-accent-orange: #fca21a;
   --color-accent-blue: #38b6ff;
-  --color-accent-pink: #e5b4ff;
+  --color-accent-pink: #d4a8f0;
 
   /* Neutral / warm backgrounds */
-  --color-warm: #faf5ff;
-  --color-warm-dark: #f0e6f6;
+  --color-warm: #f8f4ff;
+  --color-warm-dark: #ede4f8;
 
   /* Legacy aliases used in components */
-  --color-accent: #b11fff;
-  --color-accent-dark: #7615aa;
+  --color-accent: #8b5cd4;
+  --color-accent-dark: #5e3490;
 
   /* Fonts — change the values here to swap fonts site-wide */
   --font-title:   'Imprima', sans-serif;            /* section & page titles */
@@ -35,6 +35,11 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+blockquote::before,
+blockquote::after {
+  content: none;
 }
 
 body {

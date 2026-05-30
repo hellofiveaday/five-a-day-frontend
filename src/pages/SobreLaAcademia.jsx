@@ -47,8 +47,8 @@ function TestimonialsCarousel({ testimonials }) {
         </svg>
       </div>
 
-      <div className="relative min-h-40 flex items-center justify-center">
-        {/* Prev arrow */}
+      {/* Arrows + grid wrapper — arrows are siblings of the grid so they don't affect its height */}
+      <div className="relative px-10">
         <button
           onClick={prev}
           aria-label="Anterior"
@@ -59,21 +59,21 @@ function TestimonialsCarousel({ testimonials }) {
           </svg>
         </button>
 
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-700 px-10 ${
-              i === current ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <p className="text-gray-700 italic leading-relaxed mb-4 text-justify">
-              {t.text}
-            </p>
-            <p className="font-heading font-semibold text-primary-dark">— {t.author}</p>
-          </div>
-        ))}
+        {/* CSS grid stack — container auto-sizes to the tallest testimonial */}
+        <div className="grid">
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className={`col-start-1 row-start-1 flex flex-col items-center transition-opacity duration-700 ${
+                i === current ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
+            >
+              <p className="text-gray-700 italic leading-relaxed mb-3 text-justify">{t.text}</p>
+              <p className="font-heading font-semibold text-primary-dark">— {t.author}</p>
+            </div>
+          ))}
+        </div>
 
-        {/* Next arrow */}
         <button
           onClick={next}
           aria-label="Siguiente"

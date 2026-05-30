@@ -23,7 +23,7 @@ export default function ContactSection() {
     <section id="contacto" className="py-12 bg-white">
       <div className="max-w-[980px] mx-auto px-4">
         {/* Purple rectangle container */}
-        <div className="bg-[#8a1cc4] rounded-2xl p-6 md:p-10">
+        <div className="bg-[#6b3d96] rounded-2xl p-6 md:p-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
             {/* Left column — academy info */}
