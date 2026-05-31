@@ -6,7 +6,7 @@
 
 This is the official website of **Five a Day English Academy**, an innovative English academy in Albacete (Spain) founded by two bilingual teachers. The site presents the academy's methodology, team, philosophy, and provides a contact form for families and students.
 
-The website is live at **[fiveaday.netlify.app](https://fiveaday.netlify.app)** and also accessible via a custom domain purchased through Wix. It is built with modern web technology (React + Vite + Tailwind CSS) and deployed automatically through Netlify whenever changes are pushed to the `main` branch on GitHub.
+The website is live at **[fiveadayenglish.com](https://fiveadayenglish.com/)** and also accessible via Netlify (because it's hosted there). It is built with modern web technology (React + Vite + Tailwind CSS) and **deployed automatically through Netlify whenever changes are pushed to the `main` branch on GitHub**.
 
 The project has two files designed to be the only ones you ever need to touch for day-to-day maintenance:
 
@@ -33,11 +33,11 @@ The Five a Day website and supporting services are hosted across several platfor
 
 ### Google Cloud Platform (Infrastructure)
 
-- **[Google Cloud Platform (GCP)](https://cloud.google.com)** — Hosts more complex backend services and infrastructure. Currently being set up for future needs beyond the static website. Will run Docker containers with four services in Django for advanced functionality like form processing, authentication, and data storage. For now, the simple static website doesn't use GCP, but it's the foundation for scaling the project.
+- **[Google Cloud Platform (GCP)](https://cloud.google.com)** — Hosts more complex backend services and infrastructure. Currently being set up for future needs beyond the static website (for example, the management app [Five a Day Evolution](https://github.com/hellofiveaday/five-a-day). Will run Docker containers with four services in Django for advanced functionality like form processing, authentication, and data storage. For now, the simple static website doesn't use GCP, but it's the foundation for scaling the project and the centralized place for a serious cloud system.
 
 ### Email & Authentication
 
-- **[Gmail & Google Account](https://mail.google.com)** — The centerpiece of all login and authentication systems. The Google account associated with `jhernandez@allot.com` is the main administrative account for:
+- **[Gmail & Google Account](https://mail.google.com)** — The centerpiece of all login and authentication systems. The Google account associated with `hellofiveaday@gmail.com` is the main administrative account for:
   - Google Cloud Platform access
   - Netlify account management
   - GitHub organization (if team-based)
@@ -47,7 +47,7 @@ The Five a Day website and supporting services are hosted across several platfor
 ### Live Domains
 
 - **[fiveaday.com](https://fiveaday.com)** — The production domain. This is the public-facing URL where students and families visit the website. It's fully deployed and live.
-- **example.com** — A second custom domain registered (currently a placeholder). This will be replaced with the actual domain name soon. It will point to the same Netlify hosting as fiveaday.com, allowing traffic from both domains to reach the same website.
+- **example.com** — A second custom domain registered (currently a placeholder). This will be replaced with the actual domain name soon. It will point to the management app for Five a Day Evolution.
 
 ### **How It All Connects**
 
@@ -100,7 +100,7 @@ For future backend features (forms that save to a database, user accounts, etc.)
 
 This section is for **non-technical people** who want to make small updates — changing a phone number, editing a text, updating a color — directly in GitHub without running anything on a computer.
 
-> **Important:** Any change you save in GitHub is automatically published to the live website within 1–2 minutes via Netlify. There is no separate "publish" step.
+> **Important:** Any change you save in GitHub is automatically published to the live website within 1–2 minutes via Netlify. There is no separate "publish" step. Besides, this takes a lot of credits, so don't do it too often within a month. **Credits are reset monthly**.
 
 ---
 
@@ -108,61 +108,66 @@ This section is for **non-technical people** who want to make small updates — 
 
 Follow these steps to change any text, link, phone number, address, or similar content:
 
-1. **Go to the repository on GitHub** (the page you're reading this from, or ask the developer for the link).
+1. **Go to the repository on GitHub** (the page you're reading this from).
 
-2. **Navigate to the file** `src/data.js`. You can click through the folders: `src` → `data.js`.
+2. **Navigate to the file** `src/data.js`. You can click through the folders: `src` → `data.js` (here's [a direct link](https://github.com/hellofiveaday/five-a-day-frontend/blob/main/src/data.js.
 
 3. **Click the pencil icon** (Edit this file) in the top-right corner of the file view. It looks like ✏️.
 
-4. **Find the text you want to change.** Use `Ctrl+F` (Windows) or `Cmd+F` (Mac) in your browser to search for the word you're looking for. For example, search for `613 48 11 41` to find the phone number.
+4. **Find the text you want to change.** Use `Ctrl+F` (Windows) or `Cmd+F` (Mac) in your browser to search for the word you're looking for. For example, search for `613 48 11 41` to find the phone number. Make sure you use exact text, a trick is to use incomplete text, like `conta` for contact.
 
-5. **Make your change.** Click on the line, delete the old text, and type the new text. Be careful to keep the surrounding quote marks (`"`) in place — only change what's between them.
+5. **Make your change.** Click on the line, delete the old text, and type the new text. Be careful to keep the surrounding quote marks (`"`) in place or other syntax structure, like `[]` or `{}` (they usually open and close, this is important) — only change what's between them, if something breaks, the page will NOT show the information. *You can copy/paste this to ChatGPT and ask if the Javascript format is correct so it validates it*.
 
-6. **Save your change.** Scroll down to the bottom of the page. You'll see a section called "Commit changes". Write a short description of what you changed (e.g. `Update phone number`) and click the green **"Commit changes"** button.
+6. **Save your change.** Scroll down to the bottom of the page. You'll see a section called "Commit changes". Write a short description of what you changed (e.g. `Update phone number`) and click the green **"Commit changes"** button. **This step triggers a deploy in Netlify, up to this point no changes were done**.
 
-7. **Wait 1–2 minutes.** Netlify will automatically detect the change and rebuild the website. Your update will appear on [fiveaday.netlify.app](https://fiveaday.netlify.app).
+7. **Wait 1–2 minutes.** Netlify will automatically detect the change and rebuild the website. Your update will appear on [fiveaday.netlify.app](https://fiveaday.netlify.app) and on production **[fiveaday.com](https://fiveaday.com)**.
 
 ---
 
 ### Editing styles on GitHub (styles.css)
 
-Follow the same steps as above, but navigate to `src/styles.css` instead of `src/data.js`.
+Follow the same steps as above, but navigate to `src/styles.css` instead of `src/data.js` ([direct link](https://github.com/hellofiveaday/five-a-day-frontend/blob/main/src/styles.css).
 
-This file controls colors, fonts, and visual effects. The most common changes are colors:
+This file controls colors, fonts, and visual effects. The most common changes are colors. **Beware that CSS is more difficult to change than Javascript**, use chatGPT to validate and guide you. This also changes layout, format, structure and other styling that's not so obvious:
 
 1. Find the color you want to change. For example, search for `primary` to find the main purple color (`#8b5cd4`).
 2. Change the hex color code (the `#xxxxxx` value) to a new one. You can use any color picker online to get hex codes — for example [coolors.co](https://coolors.co) or [htmlcolorcodes.com](https://htmlcolorcodes.com).
-3. Commit the change as described above.
+3. Commit the change as described above. **Up until this point, no changes were done, this will again trigger a deploy in Netlify**.
 
 ---
 
 ### Worked example
 
-**Scenario:** The phone number has changed from `613 48 11 41` to `699 00 11 22`.
+**Scenario:** The working schedule changed to add 12:30 as a suitable hour.
 
 1. Open `src/data.js` in GitHub.
-2. Search for `613 48 11 41`.
+2. Search for `16:10` because we know it's an hour already there.
 3. Find this line:
 
    ```js
-   phone: "613 48 11 41",
+   options: ["16:10", "17:40", "19:10"],
    ```
 
-4. Change it to:
+4. Change it to (notice the syntax):
 
    ```js
-   phone: "699 00 11 22",
+   options: ["12:30", "16:10", "17:40", "19:10"],
    ```
 
-5. Also update the WhatsApp link right above it:
+5. Also update other places that could be of interest (I'll change the label too, notice that this options was inside this bigger structure between `{}`) :
 
    ```js
-   whatsapp: "https://wa.me/34699001122",
+       {
+      name: "horario",
+      label: "Horario nuevo",
+      type: "select",
+      required: false,
+      options: ["12:30", "16:10", "17:40", "19:10"],
+    },
    ```
 
-   (The WhatsApp URL uses the number without spaces, with `34` at the front for Spain's country code.)
-6. Scroll down, write a note like `Update phone number`, and click **Commit changes**.
-7. In 1–2 minutes the new number appears everywhere on the site automatically.
+6. Scroll down, write a note like `Updated schedule`, and click **Commit changes**.
+7. In 1–2 minutes the new number appears everywhere on the site automatically. **Always verify that the changes was done**. You can always go back to the previous code, so don't worry about changes breaking things.
 
 ---
 
@@ -196,7 +201,7 @@ Image paths look like `"/images/home_1.jpg"`. These refer to files inside the `p
 
 ### How styles.css works
 
-Think of `styles.css` as a **palette and design manual** for the website. It defines the colors, fonts, and visual effects used everywhere.
+Think of `styles.css` as a **palette and design manual** for the website. It defines the colors, fonts, and visual effects used everywhere. It also controls (some) effects, layout, sizes and spaces, and everything that "looks".
 
 The file is organized into numbered sections with plain-language comments explaining each one.
 
@@ -276,21 +281,19 @@ To stop the server, press `Ctrl+C` in the terminal.
   1. Pulls the latest code.
   2. Runs `npm run build` to compile the React app into plain HTML/CSS/JS files.
   3. Deploys those files to its global server network.
-  4. The live site at **[fiveaday.netlify.app](https://fiveaday.netlify.app)** updates within 1–2 minutes.
+  4. The live site at **[fiveaday.netlify.app](https://fiveaday.netlify.app)** and **[fiveadayenglish.com](https://fiveadayenglish.com/)** updates within 1–2 minutes, deploys are automatic and trigger on commit to `main`.
 
-The **custom domain** (purchased via Wix) is pointed at Netlify's servers using DNS records — this is already configured and you don't need to touch it. Both the Netlify subdomain and the custom Wix domain point to the same site.
-
-The `netlify.toml` file in the project root contains Netlify's build configuration. You should not need to edit it.
+The **custom domain** (in Squarespace) is pointed at Netlify's servers using DNS records — this is already configured and you don't need to touch it. Both the Netlify subdomain and the custom Squarespace domain point to the same site.
 
 ---
 
 ### Understanding Git and GitHub — Versioning and change history
 
-Git and GitHub sound technical, but the idea is simple: they work like **"Version History" on Google Docs**, but for code files. Instead of typing in a document and saving over the old version, Git lets you save a complete snapshot of your entire project at each moment, with a note about what changed.
+Git and GitHub sound technical, but the idea is simple: they work like **"Version History" on Google Docs or Google Sheets**, but for code files. Instead of typing in a document and saving over the old version, Git lets you save a complete snapshot of your entire project at each moment, with a note about what changed. This allows for complete control, going back to previous code if needed, and other useful commands. Github is fully integrated with Git.
 
 #### The core concepts
 
-**Git** (on your computer) keeps track of every change you make. **GitHub** (on the internet) is where you store and share those changes.
+**Git** (on your computer) keeps track of every change you make. **GitHub** (on the internet) is where you store and share those changes. Think of this like pictures. Git is your album in your computer, Github is your Intagram.
 
 Think of it like this:
 
@@ -344,7 +347,7 @@ Here's what happens each time you make a change:
 2. **Edit** — Make your changes using your code editor
 
    ```txt
-   Edit src/data.js, save it normally
+   Edit src/data.js, save it normally, I recommend using Copilot or an AI to verify that code was correct
    ```
 
 3. **Check what changed** — See which files you modified
@@ -356,10 +359,10 @@ Here's what happens each time you make a change:
 4. **Stage your changes** — Tell Git "I want to save these files"
 
    ```bash
-   git add src/data.js
+   git add *
    ```
 
-5. **Commit** — Take a snapshot with a message explaining what you did
+5. **Commit** — Take a snapshot with a message explaining what you did, messages are useful to identify commits, so try to really describe what you did
 
    ```bash
    git commit -m "Update phone number from 613 to 699"
@@ -417,9 +420,9 @@ Git **does not** save:
 
 - `node_modules/` folder (too big; everyone regenerates it with `npm install`)
 - Temporary files or editor settings
-- Secrets or passwords (you'd store those separately)
+- Secrets or passwords (you'd store those separately in a .env file)
 
-This is controlled by a file called `.gitignore` which lists what to skip.
+This is controlled by a file called `.gitignore` which lists what to skip and not show, this is very important.
 
 ---
 
@@ -626,7 +629,7 @@ The most common changes and where to make them:
 
 **The site isn't updating after I committed on GitHub**
 - Wait 2–3 minutes — Netlify build times vary.
-- Go to the [Netlify dashboard](https://app.netlify.com) and check the "Deploys" tab for the project. If the latest deploy shows an error, click on it to read the build log.
+- Go to the [Netlify dashboard](https://app.netlify.com) and check the "Deploys" tab for the project. If the latest deploy shows an error, click on it to read the build log. **You can provide a trusted engineer with these logs to check what went wrong, as well as ChatGPT**.
 
 **I broke something and the site went blank / shows an error**
 - The most common cause is a formatting error in `data.js` — a missing comma, an unmatched quote, or a deleted bracket.
