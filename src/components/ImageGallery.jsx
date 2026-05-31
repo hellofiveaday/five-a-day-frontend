@@ -24,7 +24,9 @@ export default function ImageGallery({ images }) {
       {/* Peek carousel */}
       <div className="overflow-hidden rounded-xl h-80 md:h-130 relative">
         {images.map((src, i) => {
-          // Normalise offset to [-floor(n/2), ceil(n/2)] so wrapping chooses shortest path
+          // Calculate position of this image relative to current.
+          // Normalize offset to [-floor(n/2), ceil(n/2)] so wrapping takes shortest path.
+          // For example, with 11 images: index 0 at offset -5, index 5 (center) at 0, index 10 at 5.
           const raw = ((i - current) % n + n) % n;
           const offset = raw > n / 2 ? raw - n : raw;
           return (
@@ -33,6 +35,7 @@ export default function ImageGallery({ images }) {
               className="absolute inset-y-0 w-[80%] px-3 transition-[left] duration-500 ease-in-out"
               style={{ left: `calc(10% + ${offset} * 80%)` }}
               onClick={() => {
+                // Center image (offset 0) opens lightbox. Side images navigate left/right.
                 if (offset === 0) setLightbox(true);
                 else if (offset < 0) prev();
                 else next();

@@ -88,7 +88,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {open && (
-          <ul className="lg:hidden bg-white border-t border-purple-100 px-4 pb-4 space-y-1">
+          <ul className="lg:hidden bg-white border-t border-primary/10 px-4 pb-4 space-y-1">
             {navigation.map((item) => (
               <li key={item.path}>
                 {item.path.startsWith("#") ? (

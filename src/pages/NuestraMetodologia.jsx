@@ -9,7 +9,7 @@ export default function NuestraMetodologia() {
       <section className="py-12 bg-white">
         <div className="max-w-245 mx-auto px-4 space-y-4">
           <Reveal>
-            <h1 className="font-title text-4xl font-bold text-primary-dark mb-2 text-center">¿Qué ofrecemos?</h1>
+            <h1 className="font-title text-4xl font-bold text-primary-dark mb-2 text-center">{metodologiaPage.title}</h1>
             <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.intro}</p>
             <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.groups}</p>
             <p className="text-gray-700 leading-relaxed text-justify">{metodologiaPage.adults}</p>
@@ -26,7 +26,7 @@ export default function NuestraMetodologia() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <p className="font-heading text-lg font-semibold text-primary/50">Vídeo próximamente</p>
+              <p className="font-heading text-lg font-semibold text-primary/50">{metodologiaPage.videoPlaceholder}</p>
             </div>
           </Reveal>
         </div>

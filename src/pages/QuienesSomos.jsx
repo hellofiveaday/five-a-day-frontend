@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { founders } from "../data";
+import { founders, foundersPage } from "../data";
 import ContactSection from "../components/ContactSection";
 import Reveal from "../components/Reveal";
 
@@ -14,7 +14,7 @@ export default function QuienesSomos() {
             <div className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
 
               {/* Photo panel — mint green background */}
-              <div className="md:w-1/2 bg-[#e8f5e0] relative min-h-105 md:min-h-125 overflow-hidden flex items-end justify-center">
+              <div className="md:w-1/2 bg-mint relative min-h-105 md:min-h-125 overflow-hidden flex items-end justify-center">
                 <img
                   src={founder.image}
                   alt={founder.name}
@@ -44,27 +44,19 @@ export default function QuienesSomos() {
                     </svg>
 
                     {/* English quote — gradient text */}
-                    <blockquote
-                      className="relative font-heading text-3xl md:text-4xl italic leading-snug mb-5 before:content-none after:content-none"
-                      style={{
-                        background: "linear-gradient(135deg, #3d6b40 0%, #6ec44a 100%)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                      }}
-                    >
+                    <blockquote className="relative font-heading text-3xl md:text-4xl italic leading-snug mb-5 before:content-none after:content-none quote-text-gradient">
                       {founder.quoteEn}
                     </blockquote>
 
                     {/* Ornamental divider */}
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, rgba(93,128,96,0.35))" }} />
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#5d8060]/50" />
-                      <div className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, rgba(93,128,96,0.35))" }} />
+                      <div className="flex-1 h-px divider-fade-right" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-forest/50" />
+                      <div className="flex-1 h-px divider-fade-left" />
                     </div>
 
                     {/* Spanish translation */}
-                    <blockquote className="font-heading text-base italic text-[#5d8060]/60 text-center tracking-wide before:content-none after:content-none">
+                    <blockquote className="font-heading text-base italic text-forest/60 text-center tracking-wide before:content-none after:content-none">
                       {founder.quoteEs}
                     </blockquote>
                   </div>
@@ -77,7 +69,7 @@ export default function QuienesSomos() {
               <div className="max-w-245 mx-auto px-8 md:px-14 space-y-10">
                 <Reveal>
                   <div>
-                    <h3 className="font-title text-xl font-semibold text-primary-dark mb-3">Sobre mí</h3>
+                    <h3 className="font-title text-xl font-semibold text-primary-dark mb-3">{foundersPage.aboutLabel}</h3>
                     <p className="text-gray-700 leading-relaxed text-justify">{founder.about}</p>
                   </div>
                 </Reveal>
@@ -85,7 +77,7 @@ export default function QuienesSomos() {
                 <Reveal delay={100}>
                   <div>
                     <h3 className="font-title text-xl font-semibold text-primary-dark mb-4">
-                      Experiencia profesional
+                      {foundersPage.experienceLabel}
                     </h3>
                     <div>
                       {founder.experience.map((exp, idx, arr) => (

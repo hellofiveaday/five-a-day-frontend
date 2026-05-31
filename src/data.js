@@ -1,17 +1,33 @@
-// ─────────────────────────────────────────────
-// data.js – Single source of truth for Five a Day English Academy
-// ─────────────────────────────────────────────
+/* ═══════════════════════════════════════════════════════════════
+   data.js – Single Source of Truth
+   ═══════════════════════════════════════════════════════════════
+
+   This file contains ALL content and configuration for the website:
+   - Text, headings, descriptions, form labels, testimonials
+   - Image paths and URLs
+   - Contact information and business hours
+   - Navigation menu structure
+   - Form field definitions
+
+   Components import values from this file and render them.
+   To change ANY text or content on the site, edit this file.
+
+   No hardcoded content should appear in .jsx files — only references
+   to exports from this data.js file.
+   ═══════════════════════════════════════════════════════════════ */
 
 export const siteConfig = {
   name: "Five a Day",
   fullName: "Five a Day English Academy",
   tagline: "We are here to learn and help our brains grow stronger.",
   taglineEs: "Estamos aquí para aprender y ayudar a nuestros cerebros a fortalecerse.",
-  copyright: "© 2025 Silvia Yubitza Moreno Carlín",
+  copyright:  "© 2026 Joaquín, Sílvia and Penélope — Built with great care, love and the best intentions",
   email: "hellofiveaday@gmail.com",
   phone: "613 48 11 41",
   whatsapp: "https://wa.me/34613481141",
   mapsUrl: "https://maps.app.goo.gl/1JMh9yrg4pPKtfJW9",
+  mapsEmbedUrl: "https://maps.google.com/maps?q=38.9939218,-1.8668769&z=17&output=embed",
+  mapsLinkLabel: "Abrir en Google Maps",
   address: {
     street: "C/ Hermanos Jiménez, 25",
     postalCode: "02004",
@@ -47,6 +63,7 @@ export const heroContent = {
   cta: "¡APÚNTATE AQUÍ!",
   extras:
     "Únete a nuestra academia si quieres adquirir el inglés con una metodología increíblemente efectiva y única en toda España. ¿A qué esperas? ¡No dejes pasar esta gran oportunidad!",
+  ctaSubtext: undefined,
 };
 
 export const metodologiaHome = {
@@ -78,10 +95,15 @@ export const metodologiaHome = {
   ],
 };
 
+export const foundersPage = {
+  aboutLabel: "Sobre mí",
+  experienceLabel: "Experiencia profesional",
+};
+
 export const founders = [
   {
-    id: "claudia",
-    name: "Ms Claudia",
+    id: "penelope",
+    name: "Ms Penélope",
     role: "Co-fundadora y maestra bilingüe",
     quoteEn:
       "As long as I know that I am doing my best, I can accept the fact that I am not always going to get it right.",
@@ -135,6 +157,7 @@ export const founders = [
 
 export const metodologiaPage = {
   title: "¿Qué ofrecemos?",
+  videoPlaceholder: "Vídeo próximamente",
   intro:
     "Para los más jóvenes, ofrecemos clases de inglés dos veces a la semana de 1 hora y 20 minutos de duración por sesión tanto a nivel principiante como avanzado, y todo el rango intermedio. Además, los viernes ofrecemos sesiones especiales gratuitas llamadas \"Fun Fridays\" durante las cuales se realizan actividades tan divertidas como Zumba en Inglés, talleres de manualidades o actividades dedicadas a los ODS.",
   groups:
@@ -242,6 +265,10 @@ export const sobreAcademiaPage = {
       ],
     },
   ],
+  gallerySectionTitle: "Nuestra academia",
+  testimonialsSectionTitle: "¿Qué opinan las familias?",
+  mapSectionTitle: "Ubicación",
+  mapFrameTitle: "Five a Day English Academy — Ubicación",
   gallery: [
     "/images/about_galery_1.jpg",
     "/images/about_galery_2.jpg",
@@ -318,6 +345,12 @@ export const contactForm = {
   title: "Contacta con nosotras",
   subtitle:
     "Rellena el formulario con tus datos personales y nos pondremos en contacto contigo lo antes posible.",
+  successTitle: "¡Mensaje enviado correctamente!",
+  successBody: "Hemos recibido tu formulario. Para una respuesta más rápida, también puedes contactarnos por WhatsApp.",
+  legalLinkLabel: "Aviso legal",
+  maintenanceActive: false,
+  maintenanceTitle: "Formulario en Mantenimiento",
+  maintenanceMessage: "El formulario de contacto está en mantenimiento. Por favor, envíanos un mensaje por WhatsApp y te responderemos lo antes posible.",
   fields: [
     { name: "nombre", label: "Nombre", type: "text", required: true },
     { name: "apellidos", label: "Apellidos", type: "text", required: false },
@@ -334,4 +367,32 @@ export const contactForm = {
     { name: "mensaje", label: "Déjanos un mensaje...", type: "textarea", required: true },
   ],
   submitLabel: "Enviar",
+};
+
+export const whatsappPopup = {
+  question: "¿Tienes alguna pregunta?",
+  body: "Escríbenos por WhatsApp y te respondemos lo antes posible. ¡Estaremos encantadas de ayudarte!",
+  cta: "Enviar mensaje",
+};
+
+export const legalPage = {
+  title: "Aviso Legal",
+  sections: [
+    {
+      heading: "1. Datos identificativos",
+      body: "En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, la titular de este sitio web es Silvia Yubitza Moreno Carlín, con domicilio en C/ Hermanos Jiménez, 25, 02004 Albacete, España. Email: hellofiveaday@gmail.com. Teléfono: 967 049 096.",
+    },
+    {
+      heading: "2. Propiedad intelectual",
+      body: "Todos los contenidos de este sitio web, incluyendo textos, fotografías, gráficos, imágenes, iconos, tecnología, software así como su diseño gráfico y códigos fuente, constituyen una obra cuya propiedad pertenece a Five a Day English Academy.",
+    },
+    {
+      heading: "3. Protección de datos",
+      body: "De conformidad con lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD), le informamos de que los datos personales que nos proporcione a través del formulario de contacto serán tratados con la finalidad de gestionar su consulta. La base legal del tratamiento es su consentimiento. No se cederán datos a terceros salvo obligación legal.",
+    },
+    {
+      heading: "4. Limitación de responsabilidad",
+      body: "Five a Day English Academy no se hace responsable de los posibles errores de seguridad que se puedan producir ni de los posibles daños que puedan causarse al sistema informático del usuario (hardware y software), los ficheros o documentos almacenados en el mismo, como consecuencia de un mal funcionamiento del navegador o del uso de versiones no actualizadas del mismo.",
+    },
+  ],
 };

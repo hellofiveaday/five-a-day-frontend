@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+// Wrapper component that fades in and slides up content when it scrolls into view.
+// Used throughout the site for scroll-triggered animations on sections, cards, and text.
 export default function Reveal({ children, delay = 0, className = "" }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -7,6 +9,10 @@ export default function Reveal({ children, delay = 0, className = "" }) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // IntersectionObserver watches when the element enters the viewport.
+    // Once 8% of the element is visible (threshold: 0.08), trigger the fade-in animation.
+    // We disconnect immediately after first intersection (don't need to watch again).
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

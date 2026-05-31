@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import ScrollToTop from "./components/ScrollToTop";
 import { usePreloadImages } from "./hooks/usePreloadImages";
 
+// All image paths used in the site. Preloading these prevents flickering when users navigate.
 const ALL_IMAGES = [
   "/images/logo_transparent.png",
   "/images/logo_contact.png",

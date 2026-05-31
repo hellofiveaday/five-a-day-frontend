@@ -115,7 +115,7 @@ export default function SobreLaAcademia() {
               className="w-full h-64 md:h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
-          <div className="md:w-1/2 bg-[#e6f7f0] flex flex-col justify-center p-8 md:p-12">
+          <div className="md:w-1/2 bg-mint-light flex flex-col justify-center p-8 md:p-12">
             <Reveal>
               <h1 className="font-title text-3xl md:text-4xl font-bold text-primary-dark mb-6">
                 {sobreAcademiaPage.title}
@@ -176,7 +176,7 @@ export default function SobreLaAcademia() {
         <div className="max-w-245 mx-auto px-4">
           <Reveal>
             <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
-              Nuestra academia
+              {sobreAcademiaPage.gallerySectionTitle}
             </h2>
           </Reveal>
           <ImageGallery images={sobreAcademiaPage.gallery} />
@@ -188,7 +188,7 @@ export default function SobreLaAcademia() {
         <div className="max-w-245 mx-auto px-4">
           <Reveal>
             <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-10">
-              ¿Qué opinan las familias?
+              {sobreAcademiaPage.testimonialsSectionTitle}
             </h2>
           </Reveal>
           <TestimonialsCarousel testimonials={sobreAcademiaPage.testimonials} />
@@ -200,13 +200,13 @@ export default function SobreLaAcademia() {
         <div className="max-w-245 mx-auto px-4">
           <Reveal>
             <h2 className="font-title text-3xl font-bold text-primary-dark text-center mb-8">
-              Ubicación
+              {sobreAcademiaPage.mapSectionTitle}
             </h2>
           </Reveal>
           <Reveal delay={100} className="rounded-xl overflow-hidden shadow-lg">
             <iframe
-              title="Five a Day English Academy — Ubicación"
-              src="https://maps.google.com/maps?q=38.9939218,-1.8668769&z=17&output=embed"
+              title={sobreAcademiaPage.mapFrameTitle}
+              src={siteConfig.mapsEmbedUrl}
               className="w-full h-72 md:h-96"
               style={{ border: 0 }}
               allowFullScreen=""
@@ -216,7 +216,7 @@ export default function SobreLaAcademia() {
           </Reveal>
           <div className="mt-4 text-center">
             <a
-              href="https://maps.app.goo.gl/1JMh9yrg4pPKtfJW9"
+              href={siteConfig.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-heading font-semibold transition-colors"
@@ -225,7 +225,7 @@ export default function SobreLaAcademia() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              Abrir en Google Maps
+              {siteConfig.mapsLinkLabel}
             </a>
           </div>
         </div>
