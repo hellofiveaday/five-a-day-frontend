@@ -21,7 +21,7 @@ export const siteConfig = {
   fullName: "Five a Day English Academy",
   tagline: "We are here to learn and help our brains grow stronger.",
   taglineEs: "Estamos aquí para aprender y ayudar a nuestros cerebros a fortalecerse.",
-  copyright:  "© 2026 by Five a Day English",
+  copyright:  "© 2026 by Five a Day English ",
   email: "hellofiveaday@gmail.com",
   // Mobile number used for WhatsApp and displayed as the main contact.
   phone: "613 48 11 41",
