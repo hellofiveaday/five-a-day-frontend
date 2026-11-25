@@ -123,7 +123,7 @@ export const foundersPage = {
 export const founders = [
   {
     id: "penelope",
-    name: "Ms Penélope",
+    name: "Ms Claudia",
     role: "Co-fundadora y maestra bilingüe",
     quoteEn:
       "As long as I know that I am doing my best, I can accept the fact that I am not always going to get it right.",
